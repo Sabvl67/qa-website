@@ -10,26 +10,30 @@ export const PinContainer = ({
   href,
   className,
   containerClassName,
+  target="_blank",
+  rel = "noopener noreferrer"
 }: {
   children: React.ReactNode;
   title?: string;
   href?: string;
   className?: string;
   containerClassName?: string;
+  target?: string;
+  rel?: string;
 }) => {
   const [transform, setTransform] = useState(
     "translate(-50%,-50%) rotateX(0deg)"
   );
 
   const onMouseEnter = () => {
-    setTransform("translate(-50%,-50%) rotateX(40deg) scale(0.8)");
+    setTransform("translate(-50%,-50%) rotateX(25deg) scale(0.9)");
   };
   const onMouseLeave = () => {
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
   };
 
   return (
-    <Link
+    <a
       className={cn(
         "relative group/pin z-50  cursor-pointer",
         containerClassName
@@ -37,11 +41,13 @@ export const PinContainer = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       href={href || "/"}
+      target={target}
+      rel={rel}
     >
       <div
         style={{
           perspective: "1000px",
-          transform: "rotateX(70deg) translateZ(0deg)",
+          transform: "rotateX(20deg) translateZ(0deg)",
         }}
         className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2"
       >
@@ -55,7 +61,7 @@ export const PinContainer = ({
         </div>
       </div>
       <PinPerspective title={title} href={href} />
-    </Link>
+    </a>
   );
 };
 
@@ -99,13 +105,13 @@ export const PinPerspective = ({
                 y: "-50%",
               }}
               animate={{
-                opacity: [0, 1, 0.5, 0],
+                opacity: [0, 0.8, 0.4, 0],
                 scale: 1,
 
                 z: 0,
               }}
               transition={{
-                duration: 6,
+                duration: 4,
                 repeat: Infinity,
                 delay: 0,
               }}

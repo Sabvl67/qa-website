@@ -1,11 +1,10 @@
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import { FloatingNav } from "@/components/ui/FloatingNav";
-import { ModeToggle } from "@/components/ui/modeToggle";
 import { FaHome } from "react-icons/fa"
 import { navItems } from "@/data";
 import RecentProjects from "@/components/RecentProjects";
-import Experience from "@/components/Experience";
+import Skill from "@/components/Skill";
 import Footer from "@/components/Footer";
 
 const Home = () => {
@@ -17,8 +16,8 @@ const Home = () => {
         <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />
+        <Skill/>
         <RecentProjects/>
-        <Experience/>
         <Footer/>
       </div>
     </main>
