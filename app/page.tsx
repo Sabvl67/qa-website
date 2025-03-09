@@ -6,6 +6,8 @@ import { navItems } from "@/data";
 import RecentProjects from "@/components/RecentProjects";
 import Skill from "@/components/Skill";
 import Footer from "@/components/Footer";
+import { StickyScroll } from "@/components/ui/StickyScroll";
+import Experience from "@/components/Experience";
 
 const Home = () => {
   return (
@@ -15,8 +17,9 @@ const Home = () => {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <Grid />
+        {/* <Grid /> */}
         <Skill/>
+        <Experience/>
         <RecentProjects/>
         <Footer/>
       </div>

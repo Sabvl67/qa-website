@@ -1,6 +1,6 @@
 export const navItems = [
-    { name: "About", link: "#about" },
     { name: "Skills", link: "#skills" },
+    { name: "Experience", link: "#experience" },
     { name: "Projects", link: "#projects" },
     { name: "Contact", link: "#contact" },
   ];
@@ -170,7 +170,7 @@ export const navItems = [
       id: 3,
       title: "Languages & Frameworks",
       desc: [
-        "C++ & C#",
+        "C# & C++",
         "Python",
         "TypeScript",
         "JavaScript",
@@ -203,12 +203,13 @@ export const navItems = [
     },
     {
       id: 2,
-      img: "/discord.svg",
-      link: "https://discord.com/users/munjkin"
-    },
-    {
-      id: 3,
       img: "/link.svg",
       link: "https://www.linkedin.com/in/qanh-vo/"
     },
+    {
+      id: 3,
+      img: "/discord.svg",
+      link: "https://discord.com/users/munjkin"
+    },
+
   ];
